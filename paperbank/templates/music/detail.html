@@ -1,0 +1,254 @@
+{% block content %}
+
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1" author="krishna">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+
+
+    .sem
+    {
+        color: #444;
+        text-shadow:
+        1px 0px 1px #ccc, 0px 1px 1px #eee,
+        2px 1px 1px #ccc, 1px 2px 1px #eee,
+        3px 2px 1px #ccc, 2px 3px 1px #eee,
+        4px 3px 1px #ccc, 3px 4px 1px #eee,
+        5px 4px 1px #ccc, 4px 5px 1px #eee,
+        6px 5px 1px #ccc, 5px 6px 1px #eee,
+        7px 6px 1px #ccc;
+        margin-left:40px;
+    }
+
+    #class
+    {
+    width:50px;
+    float:left;
+    margin-left:40px;
+    }
+
+    .dropdown
+    {
+    margin-top:20px;
+    }
+
+    .margin
+    {
+    margin-top:100px;
+    }
+
+
+
+    </style>
+    </head>
+    <body>
+      <nav class="navbar navbar-inverse">
+    <a class="navbar-brand">
+          <img src="/static/img/logoo.png" width="120px" height="37px"></a>
+
+
+
+
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+
+
+    </div>
+
+</nav>
+
+
+
+
+      <!--========================1st mid sem=====================-->
+
+<section id="first" >
+          <div class="container" id="class">
+
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Mid Sem
+              <span class="caret"></span></button>
+
+
+            {% if name == 'computer' %}
+                {% for sub in cse1 %}
+                <h1 style="text-align:left;"  class="sem">1st semester {{str.0.string_name}} papers</h1>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{sub.cse_link_mid}}">{{sub.cse_name}}</a></li>
+                </ul>
+                {% endfor %}
+            {% endif %}
+
+
+
+
+            {% if name == 'electronics' %}
+                {% for sub in elec1 %}
+                <h1 style="text-align:left;"  class="sem">1st semester {{str.1.string_name}} papers</h1>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{sub.electronics_link_mid}}">{{sub.electronics_name}}</a></li></ul>
+                {% endfor %}
+            {%endif%}
+
+
+
+            {% if name == 'bca' %}
+                {% for sub in bca1 %}
+                <h1 style="text-align:left;"  class="sem">1st semester {{str.2.string_name}} papers</h1>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{sub.bca_link_mid}}">{{sub.bca_name}}</a></li></ul>
+                {% endfor %}
+            {%endif%}
+
+
+
+            {% if name == 'biotech' %}
+                {% for sub in biotech1 %}
+                <h1 style="text-align:left;"  class="sem">1st semester {{str.3.string_name}} papers</h1>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="{{sub.biotech_link_mid}}">{{sub.biotech_name}}</a></li></ul>
+                {% endfor %}
+            {%endif%}
+
+
+
+            {% if name == 'civil' %}
+                {% for sub in civil1 %}
+                <h1 style="text-align:left;"  class="sem">1st semester {{str.4.string_name}} papers</h1>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{sub.civil_link_mid}}">{{sub.civil_name}}</a></li></ul>
+                {% endfor %}
+            {%endif%}
+
+
+
+            {% if name == 'it' %}
+                {% for sub in it1 %}
+                <h1 style="text-align:left;"  class="sem">1st semester {{str.5.string_name}} papers</h1>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{sub.it_link_mid}}">{{sub.it_name}}</a></li></ul>
+                {% endfor %}
+            {%endif%}
+
+
+
+
+            {% if name == 'mech' %}
+                {% for sub in mech1 %}
+                <h1 style="text-align:left;"  class="sem">1st semester {{str.6.string_name}} papers</h1>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{sub.mech_link_mid}}">{{sub.mech_name}}</a></li></ul>
+                {% endfor %}
+                {%endif%}
+
+            </div>
+          </div>
+
+
+
+
+
+          <!--==============================1st end sem=============================================-->
+
+
+
+          <div class="container" id="class">
+            <h2></h2>
+
+            <div class="dropdown">
+              <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">End Sem
+              <span class="caret"></span></button>
+
+
+
+            {% if name == 'computer' %}
+                {% for sub in cse1 %}
+                <h1 style="text-align:left;"  class="sem">1st semester {{str.0.string_name}} papers</h1>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{sub.cse_link_end}}">{{sub.cse_name}}</a></li></ul>
+                {% endfor %}
+            {%endif%}
+
+
+
+            {% if name == 'electronics' %}
+                {% for sub in elec1 %}
+                <h1 style="text-align:left;"  class="sem">1st semester {{str.1.string_name}} papers</h1>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{sub.electronics_link_end}}">{{sub.electronics_name}}</a></li></ul>
+                {% endfor %}
+            {%endif%}
+
+
+
+            {% if name == 'bca' %}
+                {% for sub in bca1 %}
+                <h1 style="text-align:left;"  class="sem">1st semester {{str.2.string_name}} papers</h1>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{sub.bca_link_end}}">{{sub.bca_name}}</a></li></ul>
+                {% endfor %}
+            {%endif%}
+
+
+
+            {% if name == 'biotech' %}
+                {% for sub in biotech1 %}
+                <h1 style="text-align:left;"  class="sem">1st semester {{str.0.string_name}} papers</h1>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{sub.biotech_link_end}}">{{sub.biotech_name}}</a></li></ul>
+                {% endfor %}
+            {%endif%}
+
+
+
+            {% if name == 'civil' %}
+                {% for sub in civil1 %}
+                <h1 style="text-align:left;"  class="sem">1st semester {{str.4.string_name}} papers</h1>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{sub.civil_link_end}}">{{sub.biotech_name}}</a></li></ul>
+                {% endfor %}
+            {%endif%}
+
+
+
+            {% if name == 'it' %}
+                {% for sub in it1 %}
+                <h1 style="text-align:left;"  class="sem">1st semester {{str.5.string_name}} papers</h1>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{sub.it_link_end}}">{{sub.it_name}}</a></li></ul>
+                {% endfor %}
+            {%endif%}
+
+
+
+
+            {% if name == 'mech' %}
+                {% for sub in mech1 %}
+                <h1 style="text-align:left;"  class="sem">1st semester {{str.6.string_name}} papers</h1>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="{{sub.mech_link_end}}">{{sub.mech_name}}</a></li></ul>
+                {% endfor %}
+                {%endif%}
+            </div>
+          </div>
+
+
+
+</section>
+
+    </body>
+    </html>
+
+{% endblock %}
