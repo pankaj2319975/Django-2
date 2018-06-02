@@ -7,6 +7,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^paperbank/', include('paperbank.urls')),
+    url(r'', include('paperbank.urls')),
+    
     #url(r'^paperbank/computer/', include('paperbank.urls')),
     #url(r'^paperbank/electronics/', include('paperbank.urls')),
     #url(r'^paperbank/it/', include('paperbank.urls')),
